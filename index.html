@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Calculadora Solar</title>
+  <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Calculadora Solar</h1>
+    <label for="estado">Estado:</label>
+    <select id="estado"></select>
+    
+    <br>
+    <label for="cidade">Cidade:</label>
+    <select id="cidade">
+      <option value="sao_paulo">Cidade</option>
+    </select>
+    <br>
+    <label for="consumo">Consumo em kWh/mês:</label>
+    <input type="number" id="consumo" min="0">
+    <br>
+    <button onclick="calcular()">Calcular</button>
+    <br>
+    <div id="resultado" class="resultado">
+      <p class="title">Valor Estimado:</p>
+      <input readonly id="input-valor-instalacao" type="text">
+
+      <p class="title">Potência do Sistema Indicado:</p>
+      <input readonly id="input-potencia-sistema" type="text">
+
+      <p class="title">Geração Mensal:</p>
+      <input readonly id="input-geracao-mensal" type="text">
+
+      <p class="title">Quantidade de Placas:</p>
+      <input readonly id="input-quant-paineis" type="text">
+
+      <p class="title">Área Ocupada:</p>
+      <input readonly id="input-area-ocupada" type="text">
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
